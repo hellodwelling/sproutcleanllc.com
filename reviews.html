@@ -423,15 +423,15 @@
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                 <!-- Render each sublink -->
-                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;Our Best Work&#x27;, &#x27;copy&#x27;: &#x27;Before &amp; After&#x27;, &#x27;href&#x27;: &#x27;gallery-Before-&amp;-After&#x27;}, {&#x27;title&#x27;: &#x27;All Photos&#x27;, &#x27;copy&#x27;: &#x27;All Photos&#x27;, &#x27;href&#x27;: &#x27;gallery-All&#x27;}]"> -->
+                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;Our Best Work&#x27;, &#x27;copy&#x27;: &#x27;Before and After&#x27;, &#x27;href&#x27;: &#x27;gallery-Before-and-After&#x27;}, {&#x27;title&#x27;: &#x27;All Photos&#x27;, &#x27;copy&#x27;: &#x27;All Photos&#x27;, &#x27;href&#x27;: &#x27;gallery-All&#x27;}]"> -->
                                                   
                                                     <a
-                                                        href=" gallery-Before-&amp;-After "
+                                                        href=" gallery-Before-and-After "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Before &amp; After</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Before and After</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
@@ -710,9 +710,9 @@
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             <!-- Render each sublink -->
                                             
-                                                <a href="gallery-Before-&amp;-After" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="gallery-Before-and-After" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Before &amp; After</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Before and After</p>
                                                 </a>
                                             <!-- </each> -->
                                             
@@ -743,24 +743,28 @@
                       
                     </div>
                     <!-- Bottom CTAs -->
-                    <div class="p-1 bg-gray-50">
-                        <a
-                            href="#"
-                            class="relative block w-full px-5 py-3 font-medium text-center rounded-md  focus:outline-none focus:ring focus:z-10 text-secondary bg-gray-50 hover:bg-gray-100"
+                    <div class="d-none p-1 bg-primary sm:bg-gray-50">
+                        
+                            <button
+                            @click="contactModalOpen = true"
+                            class="relative block w-full px-5 py-3 font-medium text-center rounded-md  focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary  hover:bg-gray-100"
                             >
-                            Send us a Text
-                            <!-- text -->
-                            <!-- are these 2 correct? -->
-                            </a
-                        >
-                        <a
-                            href="#"
-                            class="relative block w-full px-5 py-3 font-medium text-center rounded-md  focus:outline-none focus:ring focus:z-10 text-secondary bg-gray-50 hover:bg-gray-100"
-                            >
-                            Send us a Text
-                            <!-- none -->
-                            </a
-                        >
+                                Send us a Text
+                            </button>
+                        
+                        
+                            <button
+                                @click="contactModalOpen = true"   
+                                :class="{'scale-100': !scrolledFromTop, 'scale-75': scrolledFromTop}"
+                                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
+                                >
+                                Send us a Text
+                            </button>
+                         
+                     
+                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1031,7 +1035,11 @@
                 <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/SNJKA5U4GKJC6TYVLR7R6VZF12UVFEWZ2RO0F3DQ.png" alt="" />
                 
                 <p class="text-base text-gray-500">
-                    We clean so you don’t have to!
+                    Sprout Clean<br/>
+                     
+                        Alliston, On <br/>
+                    
+                    +16478634359
                     <!-- Is this supposed to be here and correct?  -->
                     <!-- The finest landscaping in Austin & surrounding areas. Exceptional, professional service. You are our priority! -->
                 </p>
@@ -1163,7 +1171,7 @@
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <!-- Locations Links -->
                     <div>
-                        <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">Locations</h3>
+                        <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">Service Areas</h3>
                         <ul role="list" class="mt-4 -mx-1 space-y-4">
                             
                             <li>
@@ -1185,7 +1193,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Monday: 9:00am - 7:00pm</a
+                                    >Sun: 9:00am - 7:00pm</a
                                 >
                             </li>
                             
@@ -1193,7 +1201,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Tuesday: 9:00am - 7:00pm</a
+                                    >Mon: 9:00am - 7:00pm</a
                                 >
                             </li>
                             
@@ -1201,7 +1209,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Wednesday: 9:00am - 7:00pm</a
+                                    >Tues: 9:00am - 7:00pm</a
                                 >
                             </li>
                             
@@ -1209,7 +1217,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Thursday: 9:00am - 7:00pm</a
+                                    >Wed: 9:00am - 7:00pm</a
                                 >
                             </li>
                             
@@ -1217,7 +1225,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Friday: 9:00am - 7:00pm</a
+                                    >Thu: 9:00am - 7:00pm</a
                                 >
                             </li>
                             
@@ -1225,7 +1233,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Saturday: 7:00am - 11:00pm</a
+                                    >Fri: 7:00am - 11:00pm</a
                                 >
                             </li>
                             
@@ -1233,7 +1241,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Sunday: 7:00pm - 11:00pm</a
+                                    >Sat: 7:00pm - 11:00pm</a
                                 >
                             </li>
                             
@@ -1424,42 +1432,42 @@
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-112491"
-                                            name="112491"
+                                            id="contact-service-128065"
+                                            name="128065"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-112491" class="ml-3 text-sm font-medium text-gray-700">Home Cleaning</label>
+                                        <label for="contact-label-service-128065" class="ml-3 text-sm font-medium text-gray-700">Home Cleaning</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-112492"
-                                            name="112492"
+                                            id="contact-service-128066"
+                                            name="128066"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-112492" class="ml-3 text-sm font-medium text-gray-700">Home Organizing</label>
+                                        <label for="contact-label-service-128066" class="ml-3 text-sm font-medium text-gray-700">Home Organizing</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-112493"
-                                            name="112493"
+                                            id="contact-service-128067"
+                                            name="128067"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-112493" class="ml-3 text-sm font-medium text-gray-700">Commercial Cleaning</label>
+                                        <label for="contact-label-service-128067" class="ml-3 text-sm font-medium text-gray-700">Commercial Cleaning</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-112494"
-                                            name="112494"
+                                            id="contact-service-128068"
+                                            name="128068"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-112494" class="ml-3 text-sm font-medium text-gray-700">Move In and Move Out Cleaning</label>
+                                        <label for="contact-label-service-128068" class="ml-3 text-sm font-medium text-gray-700">Move In and Move Out Cleaning</label>
                                     </div>
                                 
                             </div>
